@@ -1,11 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Get base path from environment variable or default to '/'
+// Get base path from environment variable
 // For GitHub Pages: set to '/your-repo-name/' (e.g., '/118_LandingPage-Morpankh-Saree-/')
-// IMPORTANT: Update this to match your GitHub repository name exactly!
-// For custom domain: set to '/'
-const base = process.env.VITE_BASE_PATH || '/118_LandingPage-Morpankh-Saree-/'
+// For Netlify/Vercel/custom domain: set to '/'
+// IMPORTANT: Netlify will set VITE_BASE_PATH="/" via netlify.toml
+// For GitHub Pages, set VITE_BASE_PATH="/118_LandingPage-Morpankh-Saree-/" in GitHub Actions
+const base = process.env.VITE_BASE_PATH || '/'
 
 export default defineConfig({
   plugins: [react()],
