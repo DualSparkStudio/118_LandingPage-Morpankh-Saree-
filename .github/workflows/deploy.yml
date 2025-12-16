@@ -37,6 +37,16 @@ jobs:
             echo "✗ index.html not found!"
             exit 1
           fi
+          # Verify .nojekyll is present (postbuild script should create it)
+          if [ -f dist/.nojekyll ]; then
+            echo "✓ .nojekyll file exists"
+          else
+            echo "⚠ .nojekyll not found, creating it..."
+            touch dist/.nojekyll
+          fi
+          # List JavaScript files to verify they exist
+          echo "JavaScript files in dist:"
+          find dist -name "*.js" -type f | head -5
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
