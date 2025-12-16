@@ -1,0 +1,119 @@
+.craftsmanship-story {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--ivory);
+}
+
+.craftsmanship-background {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--deep-teal) 50%, var(--accent-gold) 100%);
+  background-image: 
+    radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(10, 77, 104, 0.3) 0%, transparent 50%);
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.craftsmanship-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 254, 249, 0.9) 0%,
+    rgba(255, 254, 249, 0.95) 100%
+  );
+  z-index: 1;
+}
+
+.craftsmanship-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.craftsmanship-text {
+  padding: var(--spacing-md);
+}
+
+.craftsmanship-text .section-title {
+  margin-bottom: var(--spacing-md);
+  color: var(--primary-teal);
+}
+
+.craftsmanship-description p {
+  margin-bottom: var(--spacing-md);
+  font-size: 1.125rem;
+  line-height: 1.9;
+  color: var(--text-gray);
+}
+
+.craftsmanship-description p:last-child {
+  margin-bottom: 0;
+}
+
+.craftsmanship-image {
+  position: relative;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-strong);
+}
+
+.craftsmanship-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-teal), var(--deep-teal));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.craftsmanship-icon {
+  font-size: 5rem;
+  margin-bottom: var(--spacing-sm);
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
+}
+
+.craftsmanship-image-placeholder p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+  margin: 0;
+}
+
+@media (max-width: 968px) {
+  .craftsmanship-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .craftsmanship-image {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .craftsmanship-story {
+    min-height: auto;
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .craftsmanship-description p {
+    font-size: 1rem;
+  }
+}
+

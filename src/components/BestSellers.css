@@ -1,0 +1,131 @@
+.best-sellers {
+  background: var(--off-white);
+  position: relative;
+}
+
+.sellers-slider {
+  display: flex;
+  gap: var(--spacing-md);
+  overflow-x: auto;
+  padding: var(--spacing-md) 0;
+  margin-top: var(--spacing-lg);
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-teal) var(--off-white);
+}
+
+.sellers-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.sellers-slider::-webkit-scrollbar-track {
+  background: var(--off-white);
+  border-radius: 10px;
+}
+
+.sellers-slider::-webkit-scrollbar-thumb {
+  background: var(--primary-teal);
+  border-radius: 10px;
+}
+
+.seller-card {
+  min-width: 300px;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-smooth);
+  flex-shrink: 0;
+}
+
+.seller-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-strong);
+}
+
+.seller-image {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.seller-badge {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  background: var(--accent-gold);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 2;
+  box-shadow: var(--shadow-soft);
+}
+
+.seller-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 77, 104, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.seller-card:hover .seller-overlay {
+  opacity: 1;
+}
+
+.seller-cta {
+  padding: 0.875rem 2rem;
+  background: var(--white);
+  color: var(--primary-teal);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transform: translateY(20px);
+  transition: var(--transition-smooth);
+}
+
+.seller-card:hover .seller-cta {
+  transform: translateY(0);
+}
+
+.seller-content {
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.seller-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--primary-teal);
+}
+
+.seller-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .seller-card {
+    min-width: 250px;
+  }
+  
+  .seller-image {
+    height: 300px;
+  }
+}
+
