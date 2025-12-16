@@ -95,10 +95,12 @@ const Hero = () => {
   }, [])
 
   const handleWhatsAppClick = () => {
+    // Keep WhatsApp button functional for CTA
     window.open('https://wa.me/1234567890?text=Hello%20Morpankh%20Saree!%20I%20would%20like%20to%20explore%20your%20collection.', '_blank')
   }
 
   const handleExploreClick = () => {
+    // Smooth scroll to collections section
     document.querySelector('.featured-collections')?.scrollIntoView({ behavior: 'smooth' })
   }
 

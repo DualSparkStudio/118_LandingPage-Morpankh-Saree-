@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morpankh Saree</title>
+  <script>
+    // GitHub Pages SPA fallback
+    var path = window.location.pathname;
+    var segments = path.split('/').filter(Boolean);
+    var repoName = segments[0] || '';
+    var redirectPath = repoName ? '/' + repoName + '/index.html' : '/index.html';
+    
+    // Redirect to index.html for SPA routing
+    sessionStorage.redirect = location.href;
+    location.replace(redirectPath);
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
+

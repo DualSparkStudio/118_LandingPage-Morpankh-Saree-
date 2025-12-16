@@ -8,29 +8,33 @@ const collections = [
     id: 1,
     title: 'Bridal Sarees',
     description: 'Exquisite designs for your special day',
-    image: '/images/bridal-saree.jpg',
-    gradient: 'linear-gradient(135deg, #d4af37, #f5e6d3)',
+    // Bridal/Wedding saree image
+    image: 'https://images.unsplash.com/photo-1601925260368-ae2f83d49e5a?w=600&h=800&fit=crop&q=80&auto=format',
+    gradient: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(245, 230, 211, 0.2))',
   },
   {
     id: 2,
     title: 'Silk Sarees',
     description: 'Luxurious silk in traditional patterns',
-    image: '/images/silk-saree.jpg',
-    gradient: 'linear-gradient(135deg, #0a4d68, #05bfdb)',
+    // Silk saree image - traditional Indian silk
+    image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&h=800&fit=crop&q=80&auto=format',
+    gradient: 'linear-gradient(135deg, rgba(10, 77, 104, 0.2), rgba(5, 191, 219, 0.2))',
   },
   {
     id: 3,
     title: 'Party Wear',
     description: 'Elegant styles for celebrations',
-    image: '/images/party-saree.jpg',
-    gradient: 'linear-gradient(135deg, #088395, #0a4d68)',
+    // Party wear saree image
+    image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600&h=800&fit=crop&q=80&auto=format',
+    gradient: 'linear-gradient(135deg, rgba(8, 131, 149, 0.2), rgba(10, 77, 104, 0.2))',
   },
   {
     id: 4,
     title: 'Daily Elegance',
     description: 'Comfortable yet sophisticated',
-    image: '/images/daily-saree.jpg',
-    gradient: 'linear-gradient(135deg, #05bfdb, #d4af37)',
+    // Daily wear saree image
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&q=80&auto=format',
+    gradient: 'linear-gradient(135deg, rgba(5, 191, 219, 0.2), rgba(212, 175, 55, 0.2))',
   },
 ]
 
@@ -68,11 +72,6 @@ const FeaturedCollections = () => {
     return () => ctx.revert()
   }, [])
 
-  const handleCollectionClick = (title) => {
-    const message = encodeURIComponent(`Hello! I'm interested in ${title}. Can you show me your collection?`)
-    window.open(`https://wa.me/1234567890?text=${message}`, '_blank')
-  }
-
   return (
     <section ref={sectionRef} className="featured-collections section">
       <div className="container">
@@ -89,20 +88,16 @@ const FeaturedCollections = () => {
               key={collection.id}
               ref={(el) => (cardsRef.current[index] = el)}
               className="collection-card"
-              onClick={() => handleCollectionClick(collection.title)}
             >
               <div
                 className="collection-image"
                 style={{ 
-                  background: `${collection.gradient}, url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='saree${collection.id}' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Cpath d='M0 50 Q25 25 50 50 T100 50' stroke='rgba(255,255,255,0.1)' stroke-width='2' fill='none'/%3E%3Ccircle cx='25' cy='25' r='4' fill='rgba(255,255,255,0.15)'/%3E%3Ccircle cx='75' cy='75' r='4' fill='rgba(255,255,255,0.15)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='200' height='200' fill='url(%23saree${collection.id})'/%3E%3C/svg%3E")`,
-                  backgroundSize: 'cover, 200px 200px',
-                  backgroundPosition: 'center, center',
-                  backgroundRepeat: 'no-repeat, repeat'
+                  backgroundImage: `url("${collection.image}"), ${collection.gradient}`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundBlendMode: 'overlay'
                 }}
               >
-                <div className="collection-overlay">
-                  <button className="collection-cta">View Collection</button>
-                </div>
               </div>
               <div className="collection-content">
                 <h3>{collection.title}</h3>

@@ -41,6 +41,48 @@ npm run build
 npm run preview
 ```
 
+## 🌐 GitHub Pages Deployment
+
+### Option 1: Automatic Deployment (Recommended)
+
+1. Push your code to GitHub
+2. The GitHub Actions workflow will automatically build and deploy to GitHub Pages
+3. Make sure your repository name matches the base path in `vite.config.js`
+
+### Option 2: Manual Deployment
+
+1. Update the base path in `vite.config.js`:
+```javascript
+base: '/your-repo-name/'
+```
+
+2. Build the project:
+```bash
+npm run build
+```
+
+3. Deploy the `dist` folder to the `gh-pages` branch:
+```bash
+npm install -g gh-pages
+gh-pages -d dist
+```
+
+### Setting Base Path
+
+For GitHub Pages, you need to set the base path to match your repository name:
+
+1. Create a `.env` file in the root:
+```
+VITE_BASE_PATH=/your-repo-name/
+```
+
+2. Or update `vite.config.js` directly:
+```javascript
+base: '/your-repo-name/'
+```
+
+**Important**: Replace `your-repo-name` with your actual GitHub repository name.
+
 ## 🎨 Brand Colors
 
 - **Primary**: Peacock Blue / Deep Teal (#0a4d68, #088395, #05bfdb)
@@ -67,8 +109,6 @@ npm run preview
 
 Update the WhatsApp number in:
 - `src/components/Hero.jsx`
-- `src/components/FeaturedCollections.jsx`
-- `src/components/BestSellers.jsx`
 - `src/components/CTA.jsx`
 - `src/components/FloatingWhatsApp.jsx`
 - `src/components/Footer.jsx`
@@ -78,7 +118,6 @@ Replace `1234567890` with your actual WhatsApp number.
 ### Social Media Links
 
 Update social media URLs in:
-- `src/components/InstagramGallery.jsx`
 - `src/components/Footer.jsx`
 
 ### Contact Information
@@ -86,23 +125,36 @@ Update social media URLs in:
 Update contact details in:
 - `src/components/Footer.jsx`
 
-## 🚀 Deployment
+### Images
 
-### Netlify
+Currently using Unsplash placeholder images. To use your own images:
 
-1. Build the project: `npm run build`
-2. Deploy the `dist` folder to Netlify
-3. Configure redirects for SPA routing (if needed)
+1. Place images in `public/images/` directory
+2. Update image paths in:
+   - `src/components/FeaturedCollections.jsx`
+   - `src/components/BestSellers.jsx`
+   - `src/components/InstagramGallery.jsx`
 
-### Vercel
+## 🐛 Troubleshooting
 
-1. Connect your repository to Vercel
-2. Vercel will automatically detect Vite and configure build settings
-3. Deploy!
+### Blank Screen on GitHub Pages
+
+If you see a blank screen after deployment:
+
+1. Check that the `base` path in `vite.config.js` matches your repository name
+2. Ensure all asset paths are relative (they should be automatically handled by Vite)
+3. Check browser console for any 404 errors
+4. Verify the `dist` folder was deployed correctly
+
+### Images Not Loading
+
+1. Check image URLs are correct
+2. Ensure images are accessible (not blocked by CORS)
+3. For local images, place them in `public/images/` and reference as `/images/filename.jpg`
 
 ## 📝 Notes
 
-- Replace placeholder images in `/public/images/` with actual product photos
+- Replace placeholder images with actual product photos
 - Update Instagram API integration if using real feed
 - Add actual video background to Hero section
 - Configure analytics tracking
@@ -111,4 +163,3 @@ Update contact details in:
 ## 📄 License
 
 All rights reserved © 2024 Morpankh Saree
-
