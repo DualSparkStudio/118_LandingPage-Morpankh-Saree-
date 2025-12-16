@@ -1,3 +1,5 @@
+@import url('./patterns.css');
+
 .app {
   position: relative;
   width: 100%;

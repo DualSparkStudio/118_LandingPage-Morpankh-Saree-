@@ -118,7 +118,12 @@ const BestSellers = () => {
             <div key={item.id} className="seller-card">
               <div
                 className="seller-image"
-                style={{ background: item.gradient }}
+                style={{ 
+                  background: `${item.gradient}, url("data:image/svg+xml,%3Csvg width='150' height='150' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='product${item.id}' x='0' y='0' width='75' height='75' patternUnits='userSpaceOnUse'%3E%3Cpath d='M0 37.5 Q18.75 18.75 37.5 37.5 T75 37.5' stroke='rgba(255,255,255,0.12)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M37.5 0 Q37.5 18.75 37.5 37.5 Q37.5 56.25 37.5 75' stroke='rgba(255,255,255,0.08)' stroke-width='1' fill='none'/%3E%3Ccircle cx='18.75' cy='18.75' r='3' fill='rgba(255,255,255,0.2)'/%3E%3Ccircle cx='56.25' cy='56.25' r='3' fill='rgba(255,255,255,0.2)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='150' height='150' fill='url(%23product${item.id})'/%3E%3C/svg%3E")`,
+                  backgroundSize: 'cover, 150px 150px',
+                  backgroundPosition: 'center, center',
+                  backgroundRepeat: 'no-repeat, repeat'
+                }}
               >
                 <div className="seller-badge">Bestseller</div>
                 <div className="seller-overlay">

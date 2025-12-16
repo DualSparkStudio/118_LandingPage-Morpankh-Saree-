@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import useMagnetic from '../hooks/useMagnetic'
+import { PeacockFeather } from './DecorativeElements'
 import './Hero.css'
 
 const Hero = () => {
@@ -148,9 +149,15 @@ const Hero = () => {
 
       {/* Floating decorative elements */}
       <div className="hero-floating-elements">
-        <div className="floating-element floating-element-1"></div>
-        <div className="floating-element floating-element-2"></div>
-        <div className="floating-element floating-element-3"></div>
+        <div className="floating-element floating-element-1">
+          <PeacockFeather size={120} />
+        </div>
+        <div className="floating-element floating-element-2">
+          <PeacockFeather size={80} />
+        </div>
+        <div className="floating-element floating-element-3">
+          <PeacockFeather size={100} />
+        </div>
       </div>
     </section>
   )

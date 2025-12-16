@@ -93,7 +93,12 @@ const FeaturedCollections = () => {
             >
               <div
                 className="collection-image"
-                style={{ background: collection.gradient }}
+                style={{ 
+                  background: `${collection.gradient}, url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='saree${collection.id}' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Cpath d='M0 50 Q25 25 50 50 T100 50' stroke='rgba(255,255,255,0.1)' stroke-width='2' fill='none'/%3E%3Ccircle cx='25' cy='25' r='4' fill='rgba(255,255,255,0.15)'/%3E%3Ccircle cx='75' cy='75' r='4' fill='rgba(255,255,255,0.15)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='200' height='200' fill='url(%23saree${collection.id})'/%3E%3C/svg%3E")`,
+                  backgroundSize: 'cover, 200px 200px',
+                  backgroundPosition: 'center, center',
+                  backgroundRepeat: 'no-repeat, repeat'
+                }}
               >
                 <div className="collection-overlay">
                   <button className="collection-cta">View Collection</button>

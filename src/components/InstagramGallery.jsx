@@ -89,7 +89,12 @@ const InstagramGallery = () => {
             >
               <div
                 className="gallery-image"
-                style={{ background: item.gradient }}
+                style={{ 
+                  background: `${item.gradient}, url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='insta${item.id}' x='0' y='0' width='50' height='50' patternUnits='userSpaceOnUse'%3E%3Crect width='50' height='50' fill='rgba(255,255,255,0.03)'/%3E%3Ccircle cx='25' cy='25' r='8' fill='rgba(255,255,255,0.08)'/%3E%3Cpath d='M12.5 12.5 L37.5 37.5 M37.5 12.5 L12.5 37.5' stroke='rgba(255,255,255,0.05)' stroke-width='0.5'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23insta${item.id})'/%3E%3C/svg%3E")`,
+                  backgroundSize: 'cover, 100px 100px',
+                  backgroundPosition: 'center, center',
+                  backgroundRepeat: 'no-repeat, repeat'
+                }}
               >
                 <div className="gallery-overlay">
                   <svg

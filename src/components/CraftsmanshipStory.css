@@ -76,11 +76,44 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, var(--primary-teal), var(--deep-teal));
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='120' height='120' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='weave' x='0' y='0' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Cpath d='M0 30 L60 30 M30 0 L30 60' stroke='rgba(255,255,255,0.1)' stroke-width='1'/%3E%3Cpath d='M0 0 L60 60 M60 0 L0 60' stroke='rgba(255,255,255,0.05)' stroke-width='0.5'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='120' height='120' fill='url(%23weave)'/%3E%3C/svg%3E"),
+    radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.craftsmanship-image-placeholder::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.03) 10px,
+      rgba(255, 255, 255, 0.03) 20px
+    );
+  animation: weaveMove 20s linear infinite;
+}
+
+@keyframes weaveMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, 20px);
+  }
 }
 
 .craftsmanship-icon {
