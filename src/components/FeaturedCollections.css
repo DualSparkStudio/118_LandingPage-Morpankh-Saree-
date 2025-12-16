@@ -144,10 +144,28 @@
 
 @media (max-width: 768px) {
   .seller-card {
-    min-width: 250px;
+    min-width: 200px;
   }
   
   .seller-image {
-    height: 300px;
+    height: 220px;
+  }
+
+  .seller-content {
+    padding: var(--spacing-sm);
+  }
+
+  .seller-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .seller-price {
+    font-size: 1.125rem;
+  }
+
+  .seller-badge {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.65rem;
   }
 }
