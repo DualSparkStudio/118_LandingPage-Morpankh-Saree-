@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morpankh Saree</title>
+  <script>
+    // GitHub Pages SPA fallback for React Router
+    // This file is served when GitHub Pages can't find a route
+    var path = window.location.pathname;
+    var segments = path.split('/').filter(Boolean);
+    var repoName = '118_LandingPage-Morpankh-Saree-';
+    
+    // Redirect to index.html for SPA routing
+    var redirectPath = '/' + repoName + '/index.html';
+    
+    // Preserve query string and hash
+    if (window.location.search) {
+      redirectPath += window.location.search;
+    }
+    if (window.location.hash) {
+      redirectPath += window.location.hash;
+    }
+    
+    window.location.replace(redirectPath);
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
+
