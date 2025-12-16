@@ -6,34 +6,30 @@ import './FeaturedCollections.css'
 const collections = [
   {
     id: 1,
-    title: 'Bridal Sarees',
-    description: 'Exquisite designs for your special day',
-    // Bridal/Wedding saree image
-    image: 'https://images.unsplash.com/photo-1601925260368-ae2f83d49e5a?w=600&h=800&fit=crop&q=80&auto=format',
+    title: 'Printed Sarees',
+    description: 'Beautiful printed designs for every occasion',
+    image: '/images/printed-saree.png',
     gradient: 'linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(245, 230, 211, 0.2))',
   },
   {
     id: 2,
-    title: 'Silk Sarees',
-    description: 'Luxurious silk in traditional patterns',
-    // Silk saree image - traditional Indian silk
-    image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&h=800&fit=crop&q=80&auto=format',
+    title: 'Designer Sarees',
+    description: 'Exclusive designer collections',
+    image: '/images/designer-saree.png',
     gradient: 'linear-gradient(135deg, rgba(10, 77, 104, 0.2), rgba(5, 191, 219, 0.2))',
   },
   {
     id: 3,
-    title: 'Party Wear',
-    description: 'Elegant styles for celebrations',
-    // Party wear saree image
-    image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600&h=800&fit=crop&q=80&auto=format',
+    title: 'Kathpathar Sarees',
+    description: 'Traditional elegance with modern touch',
+    image: '/images/kathpathar-saree.png',
     gradient: 'linear-gradient(135deg, rgba(8, 131, 149, 0.2), rgba(10, 77, 104, 0.2))',
   },
   {
     id: 4,
-    title: 'Daily Elegance',
-    description: 'Comfortable yet sophisticated',
-    // Daily wear saree image
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&q=80&auto=format',
+    title: 'Cotton Sarees',
+    description: 'Comfortable and elegant daily wear',
+    image: '/images/cotton-saree.png',
     gradient: 'linear-gradient(135deg, rgba(5, 191, 219, 0.2), rgba(212, 175, 55, 0.2))',
   },
 ]

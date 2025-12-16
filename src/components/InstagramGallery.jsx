@@ -5,18 +5,18 @@ import './InstagramGallery.css'
 
 // Gallery items with actual images
 const galleryImages = [
-  'https://images.unsplash.com/photo-1601925260368-ae2f83d49e5a?w=400&h=400&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=400&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1601925260368-ae2f83d49e5a?w=400&h=400&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=400&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1601925260368-ae2f83d49e5a?w=400&h=400&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=400&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&q=80',
+  '/images/printed-saree.png',
+  '/images/designer-saree.png',
+  '/images/dress.png',
+  '/images/kathpathar-saree.png',
+  '/images/cotton-saree.png',
+  '/images/printed-saree.png',
+  '/images/designer-saree.png',
+  '/images/dress.png',
+  '/images/kathpathar-saree.png',
+  '/images/cotton-saree.png',
+  '/images/printed-saree.png',
+  '/images/designer-saree.png',
 ]
 
 const galleryItems = galleryImages.map((image, i) => ({
