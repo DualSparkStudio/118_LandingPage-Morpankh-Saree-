@@ -20,7 +20,7 @@ const bestSellers = [
   },
   {
     id: 3,
-    name: 'Elegant Dress',
+    name: 'Dress',
     price: '₹4,999',
     image: '/images/dress.png',
     gradient: 'linear-gradient(135deg, rgba(8, 131, 149, 0.15), rgba(10, 77, 104, 0.15))',
@@ -41,7 +41,7 @@ const bestSellers = [
   },
   {
     id: 6,
-    name: 'Premium Printed',
+    name: 'Printed Saree',
     price: '₹4,499',
     image: '/images/printed-saree.png',
     gradient: 'linear-gradient(135deg, rgba(8, 131, 149, 0.15), rgba(212, 175, 55, 0.15))',
