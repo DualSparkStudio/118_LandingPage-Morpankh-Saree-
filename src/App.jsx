@@ -5,15 +5,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Preloader from './components/Preloader'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import FeaturedCollections from './components/FeaturedCollections'
-import WhyMorpankh from './components/WhyMorpankh'
-import BestSellers from './components/BestSellers'
-import CraftsmanshipStory from './components/CraftsmanshipStory'
-import Testimonials from './components/Testimonials'
-import InstagramGallery from './components/InstagramGallery'
-import CTA from './components/CTA'
-import Footer from './components/Footer'
-import FloatingWhatsApp from './components/FloatingWhatsApp'
 import './styles/App.css'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -54,15 +45,6 @@ function App() {
       <Preloader />
       <Header />
       <Hero />
-      <FeaturedCollections />
-      <WhyMorpankh />
-      <BestSellers />
-      <CraftsmanshipStory />
-      <Testimonials />
-      <InstagramGallery />
-      <CTA />
-      <Footer />
-      <FloatingWhatsApp />
     </div>
   )
 }
