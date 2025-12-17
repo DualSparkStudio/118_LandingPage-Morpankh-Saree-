@@ -101,10 +101,7 @@ const InstagramGallery = () => {
               <div
                 className="gallery-image"
                 style={{ 
-                  backgroundImage: `url("${item.image}"), ${item.gradient}`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundBlendMode: 'overlay'
+                  background: item.gradient,
                 }}
               >
               </div>

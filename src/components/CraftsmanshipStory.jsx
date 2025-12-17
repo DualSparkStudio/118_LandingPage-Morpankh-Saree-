@@ -6,7 +6,6 @@ import './CraftsmanshipStory.css'
 const CraftsmanshipStory = () => {
   const sectionRef = useRef(null)
   const textRef = useRef(null)
-  const imageRef = useRef(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -40,25 +39,6 @@ const CraftsmanshipStory = () => {
         }
       )
 
-      // Image animation
-      gsap.fromTo(
-        imageRef.current,
-        {
-          opacity: 0,
-          x: 50,
-          scale: 0.9,
-        },
-        {
-          opacity: 1,
-          x: 0,
-          scale: 1,
-          duration: 1,
-          scrollTrigger: {
-            trigger: imageRef.current,
-            start: 'top 80%',
-          },
-        }
-      )
     }, sectionRef)
 
     return () => ctx.revert()
@@ -90,13 +70,6 @@ const CraftsmanshipStory = () => {
                 practices and supporting the communities that keep these
                 beautiful traditions alive.
               </p>
-            </div>
-          </div>
-          
-          <div ref={imageRef} className="craftsmanship-image">
-            <div className="craftsmanship-image-placeholder">
-              <div className="craftsmanship-icon">🎨</div>
-              <p>Heritage Craftsmanship</p>
             </div>
           </div>
         </div>

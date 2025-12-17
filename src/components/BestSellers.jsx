@@ -95,10 +95,7 @@ const BestSellers = () => {
               <div
                 className="collection-image"
                 style={{ 
-                  backgroundImage: `url("${collection.image}"), ${collection.gradient}`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundBlendMode: 'overlay'
+                  background: collection.gradient,
                 }}
               >
               </div>

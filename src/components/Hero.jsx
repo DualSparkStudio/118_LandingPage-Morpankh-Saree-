@@ -108,8 +108,6 @@ const Hero = () => {
     <section ref={heroRef} className="hero">
       <div className="hero-background">
         <div className="hero-overlay"></div>
-        {/* Placeholder for video or image - replace with actual asset */}
-        <div className="hero-image-placeholder"></div>
       </div>
       
       <div className="hero-content">

@@ -114,10 +114,7 @@ const FeaturedCollections = () => {
               <div
                 className="seller-image"
                 style={{ 
-                  backgroundImage: `url("${item.image}"), ${item.gradient}`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundBlendMode: 'overlay'
+                  background: item.gradient,
                 }}
               >
                 <div className="seller-badge">Bestseller</div>
