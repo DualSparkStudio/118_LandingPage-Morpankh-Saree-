@@ -7,11 +7,11 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-top: 80px;
+  padding-top: 0;
 }
 
 .hero.coming-soon {
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   padding-top: 0;
 }
 
@@ -317,11 +317,11 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 500px;
+    min-height: 100vh;
   }
   
   .hero.coming-soon {
-    min-height: calc(100vh - 80px);
+    min-height: 100vh;
   }
   
   .hero-logo img {

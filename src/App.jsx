@@ -3,7 +3,6 @@ import Lenis from '@studio-freight/lenis'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Preloader from './components/Preloader'
-import Header from './components/Header'
 import Hero from './components/Hero'
 import './styles/App.css'
 
@@ -43,7 +42,6 @@ function App() {
     <div className="app">
       <div className="grain-overlay"></div>
       <Preloader />
-      <Header />
       <Hero />
     </div>
   )
