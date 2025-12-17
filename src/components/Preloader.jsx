@@ -37,51 +37,39 @@ const Preloader = () => {
     }
   }, [progress])
 
-  // Animate feather on mount
+  // Animate logo on mount
   useEffect(() => {
     gsap.fromTo(
-      '.preloader-feather',
+      '.preloader-logo',
       {
         scale: 0,
-        rotation: -180,
         opacity: 0,
       },
       {
         scale: 1,
-        rotation: 0,
         opacity: 1,
         duration: 1.2,
         ease: 'back.out(1.7)',
       }
     )
 
-    gsap.to('.preloader-feather', {
-      rotation: 360,
-      duration: 3,
+    gsap.to('.preloader-logo', {
+      y: -10,
+      duration: 2,
       repeat: -1,
-      ease: 'none',
+      yoyo: true,
+      ease: 'power1.inOut',
     })
   }, [])
 
   return (
     <div className={`preloader ${isComplete ? 'complete' : ''}`}>
       <div className="preloader-content">
-        <div className="preloader-feather">
-          <svg
-            width="80"
-            height="80"
-            viewBox="0 0 100 100"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M50 10 L60 30 L80 35 L65 50 L70 70 L50 60 L30 70 L35 50 L20 35 L40 30 Z"
-              fill="var(--accent-gold)"
-              stroke="var(--primary-teal)"
-              strokeWidth="2"
-            />
-            <circle cx="50" cy="50" r="3" fill="var(--primary-teal)" />
-          </svg>
+        <div className="preloader-logo">
+          <img 
+            src="/images/Moprpankh-Sarees-Logo.png" 
+            alt="Morpankh Sarees Logo" 
+          />
         </div>
         <div className="preloader-text">
           <h2>Morpankh Saree</h2>
