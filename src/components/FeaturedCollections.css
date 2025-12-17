@@ -1,5 +1,5 @@
 .featured-collections {
-  background: var(--off-white);
+  background: var(--white);
   position: relative;
 }
 
@@ -11,7 +11,7 @@
   margin-top: var(--spacing-lg);
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: var(--primary-teal) var(--off-white);
+  scrollbar-color: var(--primary-blue) var(--white);
 }
 
 .sellers-slider::-webkit-scrollbar {
@@ -19,12 +19,12 @@
 }
 
 .sellers-slider::-webkit-scrollbar-track {
-  background: var(--off-white);
+  background: var(--white);
   border-radius: 10px;
 }
 
 .sellers-slider::-webkit-scrollbar-thumb {
-  background: var(--primary-teal);
+  background: var(--primary-blue);
   border-radius: 10px;
 }
 
@@ -111,7 +111,7 @@
   position: absolute;
   top: var(--spacing-sm);
   right: var(--spacing-sm);
-  background: var(--accent-gold);
+  background: var(--primary-blue);
   color: var(--white);
   padding: 0.5rem 1rem;
   border-radius: 20px;

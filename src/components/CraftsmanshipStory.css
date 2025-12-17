@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: var(--ivory);
+  background: var(--white);
 }
 
 .craftsmanship-background {
@@ -50,7 +50,7 @@
 
 .craftsmanship-text .section-title {
   margin-bottom: var(--spacing-md);
-  color: var(--primary-teal);
+  color: var(--primary-blue);
 }
 
 .craftsmanship-description p {

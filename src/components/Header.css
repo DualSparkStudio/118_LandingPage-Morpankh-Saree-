@@ -1,0 +1,92 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  transition: var(--transition-smooth);
+}
+
+.header.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-icon,
+.search-icon,
+.cart-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-blue);
+  transition: var(--transition-smooth);
+}
+
+.nav-icon:hover,
+.search-icon:hover,
+.cart-icon:hover {
+  color: var(--deep-blue);
+  transform: scale(1.1);
+}
+
+.nav-icon {
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-icon span {
+  width: 24px;
+  height: 2px;
+  background: var(--primary-blue);
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+}
+
+.nav-icon:hover span {
+  background: var(--deep-blue);
+}
+
+.search-icon svg,
+.cart-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 40px;
+  }
+  
+  .header-nav {
+    gap: 1rem;
+  }
+}

@@ -1,5 +1,5 @@
 .best-sellers {
-  background: var(--off-white);
+  background: var(--white);
   position: relative;
 }
 
@@ -10,7 +10,7 @@
 
 .section-title {
   margin-bottom: var(--spacing-sm);
-  color: var(--primary-teal);
+  color: var(--primary-blue);
 }
 
 .section-subtitle {
@@ -106,7 +106,7 @@
 .collection-content h3 {
   font-size: 1.5rem;
   margin-bottom: var(--spacing-xs);
-  color: var(--primary-teal);
+  color: var(--primary-blue);
 }
 
 .collection-content p {

@@ -3,6 +3,7 @@ import Lenis from '@studio-freight/lenis'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Preloader from './components/Preloader'
+import Header from './components/Header'
 import Hero from './components/Hero'
 import FeaturedCollections from './components/FeaturedCollections'
 import WhyMorpankh from './components/WhyMorpankh'
@@ -51,6 +52,7 @@ function App() {
     <div className="app">
       <div className="grain-overlay"></div>
       <Preloader />
+      <Header />
       <Hero />
       <FeaturedCollections />
       <WhyMorpankh />

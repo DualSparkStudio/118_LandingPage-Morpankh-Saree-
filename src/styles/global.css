@@ -3,17 +3,22 @@
    ============================================ */
 
 :root {
-  /* Brand Colors */
-  --primary-teal: #0a4d68;
-  --primary-blue: #088395;
-  --deep-teal: #05bfdb;
+  /* Brand Colors - Bright White + Dark Blue Theme */
+  --primary-blue: #0D4A7D;
+  --deep-blue: #0A3D66;
+  --secondary-blue: #1E7AB8;
+  --accent-teal: #05bfdb;
   --accent-gold: #d4af37;
   --champagne: #f5e6d3;
-  --off-white: #faf8f3;
-  --ivory: #fffef9;
+  --off-white: #ffffff;
+  --ivory: #ffffff;
   --text-dark: #111111;
   --text-gray: #4a4a4a;
   --white: #ffffff;
+  
+  /* Legacy support */
+  --primary-teal: #0D4A7D;
+  --deep-teal: #1E7AB8;
   
   /* Typography */
   --font-heading: 'Playfair Display', serif;
@@ -50,7 +55,7 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--text-dark);
-  background-color: var(--ivory);
+  background-color: var(--white);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -119,6 +124,10 @@ img {
 .section {
   padding: var(--spacing-xl) 0;
   position: relative;
+}
+
+.section-title {
+  color: var(--primary-blue);
 }
 
 .text-center {
@@ -203,15 +212,15 @@ html.lenis {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--off-white);
+  background: var(--white);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-teal);
+  background: var(--primary-blue);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--deep-teal);
+  background: var(--deep-blue);
 }
 
